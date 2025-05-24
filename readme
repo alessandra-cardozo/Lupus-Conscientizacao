@@ -1,0 +1,89 @@
+💜 Lúpus: Conscientização e Apoio 💜
+Um projeto web dedicado à conscientização sobre o Lúpus Eritematoso Sistêmico (LES), oferecendo informações essenciais, recursos de apoio e um canal de comunicação para pacientes, familiares e interessados.
+
+✨ Sobre o Projeto
+Este site foi desenvolvido com o objetivo de ser uma plataforma acessível e visualmente atraente para educar o público sobre o Lúpus, desmistificar a doença e oferecer um ponto de encontro para a comunidade. A cor roxa, símbolo da conscientização sobre o Lúpus, é predominante em todo o design, transmitindo esperança e solidariedade.
+
+🚀 Tecnologias Utilizadas
+HTML5: Estrutura semântica do conteúdo.
+
+CSS3: Estilização moderna, responsividade e animações.
+
+JavaScript (ES6+): Interatividade e funcionalidades dinâmicas.
+
+Google Fonts: Para uma tipografia elegante (Montserrat e Open Sans).
+
+Font Awesome: Para ícones vetoriais de alta qualidade.
+
+🌟 Funcionalidades Principais
+Design Atraente e Responsivo: O site se adapta perfeitamente a diferentes tamanhos de tela (desktops, tablets, celulares), garantindo uma experiência de usuário consistente.
+
+Navegação Intuitiva: Menu de navegação claro com rolagem suave para as seções.
+
+Seções Informativas:
+
+Home: Introdução impactante sobre o Lúpus.
+
+O que é Lúpus?: Explicação detalhada da doença.
+
+Sintomas: Lista dos sintomas comuns em um formato de cards visualmente agradável.
+
+Diagnóstico e Tratamento: Informações sobre como a doença é diagnosticada e as abordagens de tratamento.
+
+Vivendo com Lúpus: Dicas e estratégias para o autocuidado e a importância do apoio.
+
+Apoio e Recursos: Links para associações de pacientes, materiais educativos e notícias relevantes.
+
+Contato: Formulário para comunicação direta.
+
+Efeitos Visuais: Animações sutis ao rolar a página para uma experiência mais dinâmica.
+
+Modal de Mensagens Personalizado: Substitui os alertas padrão do navegador por caixas de diálogo mais elegantes para feedback do usuário.
+
+Integração de Redes Sociais: Links diretos para perfis de redes sociais no rodapé, usando ícones do Font Awesome.
+
+🛠️ Como Usar o Projeto
+Para visualizar e testar o projeto localmente, siga os passos abaixo:
+
+Clone ou Baixe o Repositório:
+Se você estiver usando Git, clone o repositório:
+
+git clone [URL_DO_SEU_REPOSITORIO]
+
+Ou baixe o arquivo ZIP e descompacte-o.
+
+Estrutura de Pastas:
+Certifique-se de que seus arquivos estejam organizados da seguinte forma:
+
+seu-projeto-lupus/
+├── index.html
+├── style.css
+├── script.js
+└── img/
+    └── borboleta.png (ou o nome do seu logo)
+
+Importante: Se sua imagem borboleta.png estiver em uma pasta diferente ou tiver outro nome, ajuste o caminho no index.html (ex: <img src="caminho/para/sua/borboleta.png" alt="Logo Lúpus">).
+
+Abra no Navegador:
+Simplesmente abra o arquivo index.html em seu navegador web preferido. Não é necessário um servidor web para este projeto, pois ele é puramente front-end.
+
+📂 Estrutura do Projeto
+index.html: O arquivo principal que contém a estrutura HTML do site.
+
+style.css: O arquivo CSS responsável por toda a estilização e responsividade do site.
+
+script.js: O arquivo JavaScript que adiciona interatividade e funcionalidades dinâmicas.
+
+img/: Pasta para armazenar imagens (como o logo da borboleta e futuros placeholders).
+
+🙏 Créditos e Agradecimentos
+Google Fonts: Por fornecer as fontes Montserrat e Open Sans.
+
+Font Awesome: Pelos ícones de redes sociais.
+
+Placehold.co: Pelos placeholders de imagem utilizados durante o desenvolvimento.
+
+Comunidade de Lúpus: Pela inspiração e importância de disseminar informações confiáveis.
+
+📝 Licença
+Este projeto é de código aberto e está disponível sob a licença [Nome da Licença, ex: MIT License]. Sinta-se à vontade para usar, modificar e distribuir.

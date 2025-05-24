@@ -1,0 +1,776 @@
+/* Variáveis de Cores - Paleta mais sofisticada */
+:root {
+    --purple-primary: #6A1B9A; /* Roxo principal, vibrante */
+    --purple-dark: #4A148C; /* Roxo escuro para texto e elementos de destaque */
+    --purple-light: #9C27B0; /* Roxo mais claro para acentos */
+    --purple-background-light: #F3E5F5; /* Roxo muito claro para fundos alternados */
+    --text-dark: #333333; /* Texto escuro para legibilidade */
+    --text-light: #F8F8F8; /* Texto claro para fundos escuros */
+    --white: #FFFFFF;
+    --grey-light: #F0F0F0; /* Fundo geral mais suave */
+    --grey-medium: #CCCCCC;
+    --success-color: #4CAF50; /* Verde para sucesso */
+    --error-color: #F44336; /* Vermelho para erro */
+    --box-shadow-light: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    --box-shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra um pouco mais forte */
+    --box-shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra para hover */
+}
+
+/* Reset Básico e Box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7; /* Melhorar legibilidade do texto */
+    color: var(--text-dark);
+    background-color: var(--grey-light);
+    scroll-behavior: smooth;
+}
+
+/* Container para Centralizar Conteúdo */
+.container {
+    max-width: 1100px; /* Levemente mais estreito para um visual mais contido */
+    margin: 0 auto;
+    padding: 0 25px; /* Mais padding nas laterais */
+}
+
+/* Tipografia */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--purple-dark);
+    margin-bottom: 20px; /* Aumentar espaçamento */
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5em; /* Aumentar tamanho para impacto */
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+}
+
+h2 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 40px; /* Aumentar espaçamento */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after { /* Linha decorativa abaixo do título H2 */
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--purple-light);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: var(--purple-primary); /* Roxo principal para subtítulos */
+}
+
+/* Adicionado para espaçar o título "Tratamento" */
+#diagnostico h3 {
+    margin-top: 40px; /* Mais espaçamento acima do título de tratamento */
+}
+
+/* Adicionado para espaçar o parágrafo após a lista de tratamento */
+#diagnostico ul + p {
+    margin-top: 25px; /* Adiciona espaçamento acima do parágrafo após a lista de tratamento */
+}
+
+p {
+    margin-bottom: 18px; /* Aumentar espaçamento entre parágrafos */
+    font-size: 1.05em;
+    text-align: center; /* Centraliza o texto dos parágrafos nas seções de conteúdo */
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+ul li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+ul li::before {
+    content: '💜';
+    position: absolute;
+    left: 0;
+    top: 2px; /* Ajustar alinhamento do ícone */
+    font-size: 1.1em;
+}
+
+/* Botões */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 14px 30px; /* Aumentar padding para botões maiores */
+    border-radius: 8px; /* Cantos mais arredondados */
+    text-decoration: none;
+    font-weight: 700; /* Mais negrito */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.1em;
+    box-shadow: var(--box-shadow-light); /* Sombra padrão para botões */
+}
+
+.btn-primary {
+    background-color: var(--purple-primary);
+    color: var(--white);
+    border: none; /* Remover borda para um visual mais limpo */
+}
+
+.btn-primary:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-3px); /* Efeito de "levantar" mais pronunciado */
+    box-shadow: var(--box-shadow-medium);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--purple-primary);
+    border: 2px solid var(--purple-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--purple-primary);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-medium);
+}
+
+/* Header e Navbar */
+header {
+    background-color: var(--purple-dark);
+    color: var(--white);
+    padding: 18px 0; /* Mais padding */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Sombra mais forte */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.7em; /* Logo maior */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar .logo img {
+    margin-right: 12px;
+    border-radius: 5px; /* Arredondamento sutil para o logo */
+    max-height: 40px; /* Altura máxima para o logo */
+    width: auto; /* Garante que a largura se ajuste à altura */
+    display: inline-block; /* Para alinhar com o texto */
+    vertical-align: middle; /* Alinhamento vertical com o texto */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 35px; /* Mais espaçamento entre links */
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after { /* Efeito de sublinhado animado */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--purple-light);
+    transition: width 0.3s ease-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--purple-light);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px; /* Hambúrguer maior */
+    height: 3px;
+    background-color: var(--white);
+    margin-bottom: 6px; /* Mais espaçamento entre as linhas */
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(74, 20, 140, 0.8), rgba(106, 27, 154, 0.8)), url('https://placehold.co/1500x600/6A1B9A/FFFFFF?text=Luta+Contra+o+L%C3%BApus') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 25px; /* Mais padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 550px; /* Altura mínima maior */
+    position: relative;
+    overflow: hidden; /* Para efeitos de fundo */
+}
+
+/* Adicionar um efeito de brilho sutil ao fundo do hero */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+    animation: pulse-light 10s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes pulse-light {
+    from { transform: scale(1); opacity: 0.8; }
+    to { transform: scale(1.1); opacity: 1; }
+}
+
+
+.hero-content {
+    max-width: 900px;
+    z-index: 1; /* Garantir que o conteúdo fique acima do efeito de fundo */
+}
+
+.hero-content p {
+    font-size: 1.3em; /* Texto maior */
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    padding: 80px 0; /* Mais padding para espaçamento */
+    background-color: var(--white);
+    border-bottom: 1px solid var(--grey-light); /* Borda mais suave */
+}
+
+.content-section:nth-of-type(even) {
+    background-color: var(--purple-background-light); /* Fundo roxo claro */
+}
+
+.purple-bg {
+    background-color: var(--purple-background-light) !important;
+}
+
+/* Grid de Sintomas */
+.symptom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Itens maiores */
+    gap: 35px; /* Mais espaçamento */
+    margin-top: 50px;
+    text-align: center;
+}
+
+.symptom-item {
+    background-color: var(--white);
+    padding: 30px; /* Mais padding */
+    border-radius: 15px; /* Cantos mais arredondados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave e elegante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Borda sutil */
+}
+
+.symptom-item:hover {
+    transform: translateY(-10px); /* Efeito de "levantar" mais pronunciado */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+    background-color: var(--white); /* Garante branco no hover, se o fundo for roxo claro */
+}
+
+.symptom-item img {
+    margin-bottom: 25px; /* Mais espaço para o texto */
+    border-radius: 50%;
+    border: 5px solid var(--purple-light); /* Borda mais grossa e visível */
+    width: 100px; /* Ícones maiores */
+    height: 100px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra no ícone */
+}
+
+.symptom-item h3 {
+    color: var(--purple-primary);
+    margin-bottom: 15px; /* Mais espaço para o parágrafo */
+    font-size: 1.8em; /* Título do sintoma maior */
+    font-weight: 700;
+}
+
+.symptom-item p {
+    font-size: 1.05em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.symptom-note {
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+    color: #666;
+    font-size: 1.1em;
+    padding: 0 20px; /* Adicionar padding para texto em telas pequenas */
+}
+
+/* Grid de 2 Colunas */
+.grid-2-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px; /* Mais espaçamento */
+    margin-top: 50px;
+}
+
+.grid-2-columns h3 {
+    color: var(--purple-primary);
+}
+
+/* Grid de Recursos */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Itens maiores */
+    gap: 35px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.resource-item {
+    background-color: var(--white);
+    padding: 35px; /* Mais padding */
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Para alinhar o botão ao final */
+}
+
+.resource-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-medium);
+}
+
+.resource-item h3 {
+    color: var(--purple-primary);
+    margin-bottom: 18px;
+    font-size: 1.8em;
+}
+
+.resource-item p {
+    flex-grow: 1; /* Para o parágrafo ocupar o espaço restante */
+    margin-bottom: 25px;
+}
+
+.resource-item .btn-secondary {
+    margin-top: auto; /* Empurra o botão para o final */
+}
+
+/* Formulário de Contato */
+.contact-form {
+    max-width: 700px; /* Formulário um pouco maior */
+    margin: 50px auto 0;
+    padding: 40px; /* Mais padding */
+    background-color: var(--white);
+    border-radius: 15px; /* Cantos mais arredondados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada e "flutuante" */
+    border: 1px solid rgba(0, 0, 0, 0.08); /* Borda sutil */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Mais espaçamento entre grupos */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--purple-dark);
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 15px; /* Mais padding nos inputs */
+    border: 1px solid var(--grey-medium);
+    border-radius: 10px; /* Cantos mais arredondados */
+    font-size: 1.05em;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--grey-light); /* Fundo sutil para inputs */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--purple-light);
+    box-shadow: 0 0 0 4px rgba(156, 39, 176, 0.25); /* Efeito de foco mais visível */
+    outline: none;
+    background-color: var(--white); /* Fundo branco no foco */
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px; /* Altura mínima para textarea */
+}
+
+.contact-form .btn-primary {
+    width: 100%;
+    padding: 18px; /* Botão de envio maior */
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(106, 27, 154, 0.3); /* Sombra colorida para o botão */
+}
+
+.contact-form .btn-primary:hover {
+    box-shadow: 0 8px 20px rgba(106, 27, 154, 0.4);
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--purple-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 40px 0; /* Mais padding */
+    margin-top: 40px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.social-links a {
+    color: var(--white); /* Cor dos ícones */
+    margin: 0 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1.8em; /* Tamanho dos ícones (ajustado para Font Awesome) */
+    display: inline-flex; /* Para centralizar o ícone dentro do link */
+    align-items: center;
+    justify-content: center;
+    width: 45px; /* Tamanho do círculo do ícone */
+    height: 45px;
+    border-radius: 50%; /* Torna o fundo circular */
+    border: 2px solid var(--white); /* Borda branca ao redor do ícone */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: var(--purple-light); /* Cor do ícone no hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil no hover */
+    border-color: var(--purple-light); /* Borda no hover */
+}
+
+/* Efeito de Aparecer ao Scroll (Intersection Observer) */
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(30px); /* Começa um pouco mais abaixo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transição mais longa */
+}
+
+.fade-in-on-scroll.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal para Mensagens Customizadas */
+.modal {
+    display: none; /* AGORA ESTÁ CORRETO: INICIA OCULTO */
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); /* Fundo mais escuro */
+    justify-content: center; /* Estas propriedades serão ativadas com display:flex pelo JS */
+    align-items: center; /* Estas propriedades serão ativadas com display:flex pelo JS */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: auto;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Sombra mais forte */
+    width: 90%;
+    max-width: 450px; /* Modal um pouco maior */
+    position: relative;
+    text-align: center;
+    animation: modal-open 0.3s ease-out forwards; /* Animação de abertura */
+}
+
+@keyframes modal-open {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-content.success {
+    border: 3px solid var(--success-color); /* Borda mais grossa */
+}
+
+.modal-content.error {
+    border: 3px solid var(--error-color);
+}
+
+#modalMessage {
+    font-size: 1.2em; /* Mensagem maior */
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.close-button {
+    color: var(--grey-medium);
+    font-size: 32px; /* Botão de fechar maior */
+    font-weight: bold;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 1.7em;
+    }
+    .hero-section {
+        min-height: 450px;
+        padding: 100px 20px;
+    }
+    .content-section {
+        padding: 60px 0;
+    }
+    .grid-2-columns {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--purple-dark);
+        position: absolute;
+        top: 85px; /* Ajuste para a altura do header */
+        left: 0;
+        padding: 25px 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 12px 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.1em;
+        padding: 8px 0;
+        display: block;
+    }
+
+    .nav-links a::after {
+        display: none; /* Remover sublinhado animado no mobile */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Animação do Hambúrguer */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+    
+    /* Ajuste para telas menores */
+    #diagnostico h3 {
+        margin-top: 30px; /* Margem menor em telas menores */
+    }
+
+    .hero-section {
+        padding: 80px 20px;
+        min-height: 400px;
+    }
+
+    .grid-2-columns, .symptom-grid, .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .symptom-item, .resource-item {
+        padding: 25px;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    .social-links a {
+        font-size: 1.5em; /* Ajuste para mobile */
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .hero-section {
+        padding: 60px 15px;
+        min-height: 350px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .navbar .logo {
+        font-size: 1.4em;
+    }
+
+    .navbar .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .symptom-item img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .contact-form .btn-primary {
+        padding: 14px;
+        font-size: 1.1em;
+    }
+
+    .social-links a {
+        font-size: 1.3em; /* Ajuste ainda menor para telas muito pequenas */
+        width: 35px;
+        height: 35px;
+    }
+}
